@@ -3,44 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Invaders - William Gutiérrez</title>
+    <title>Juego de la Culebrita - Snake Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Contenedor principal del juego -->
     <div class="game-container">
-        <h1>SPACE INVADERS</h1>
+        <!-- Título del juego -->
+        <h1>🐍 Culebrita</h1>
+        
+        <!-- Canvas donde se dibuja el juego -->
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        
+        <!-- Panel de información del juego -->
         <div class="game-info">
             <div class="score">Puntuación: <span id="score">0</span></div>
-            <div class="lives">Vidas: <span id="lives">3</span></div>
+            <div class="instructions">
+                <p>Usa las flechas del teclado para mover la serpiente</p>
+                <p>Come la comida roja para crecer y ganar puntos</p>
+            </div>
         </div>
         
-        <!-- Canvas del juego -->
-        <canvas id="gameCanvas" width="600" height="600"></canvas>
-        
-        <!-- Mensajes del juego -->
-        <div id="gameMessage" class="game-message"></div>
-        
-        <!-- Controles -->
-        <div class="controls">
-            <p>Controles: ← → para mover | ESPACIO para disparar | R o ENTER para reiniciar</p>
+        <!-- Mensaje de Game Over (oculto inicialmente) -->
+        <div id="gameOver" class="game-over hidden">
+            <h2>¡Game Over!</h2>
+            <p>Puntuación final: <span id="finalScore">0</span></p>
+            <p>El juego se reiniciará en <span id="countdown">3</span> segundos...</p>
         </div>
-        
-        <!-- Controles táctiles para móvil -->
-        <div class="touch-controls">
-            <button class="touch-button" id="leftBtn">←</button>
-            <button class="touch-button shoot-button" id="shootBtn">DISPARAR</button>
-            <button class="touch-button" id="rightBtn">→</button>
-        </div>
-        
-        <!-- Botón de reinicio -->
-        <div class="restart-container">
-            <button class="restart-button" id="restartBtn">REINICIAR JUEGO</button>
-        </div>
-        
-        <!-- Crédito -->
-        <div class="credit">Creado por William Gutiérrez</div>
     </div>
     
+    <!-- Script del juego -->
     <script src="script.js"></script>
 </body>
 </html>
+
